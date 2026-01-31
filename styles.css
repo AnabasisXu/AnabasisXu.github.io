@@ -1,0 +1,111 @@
+/* 教课书式批注：
+   1. 使用 CSS Variables 定义变量，方便统一修改配色。
+   2. 采用针对 ThinkPad 屏幕优化的 Lucida Console 风格字体。
+*/
+
+:root {
+    --bg-color: #0d1117;       /* 深色背景，保护视力 */
+    --text-color: #c9d1d9;    /* 柔和的文字颜色 */
+    --accent-color: #58a6ff;  /* 强调色，科技蓝 */
+    --border-color: #30363d;  /* 边框色 */
+    --font-main: "Lucida Console", Monaco, monospace; /* 满足你对等宽字体的偏好 */
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+header {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.contact-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
+
+/* 栅格布局，用于展示跨领域能力 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 悬停微动效果 */
+    border-color: var(--accent-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+.card ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+}
+
+.translation-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.year {
+    color: #8b949e;
+    min-width: 100px;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #8b949e;
+}
